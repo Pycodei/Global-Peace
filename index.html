@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Global Peace - Promoting peace, justice and equality on a healthy planet">
+    <title>Global Peace and Justice</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #fff;
+            --accent-color: seagreen;
+            --text-color: #333;
+            --background-color: #f4f4f4;
+            --card-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        nav ul li a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        h1, h2, h3 {
+            margin: 1rem 0;
+            color: var(--primary-color);
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .featured, .latest-news, .content-card {
+            background: var(--secondary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .featured-article {
+            margin-bottom: 2rem;
+        }
+
+        .featured-article img, .news-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            width: 100%;
+        }
+
+        #division {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            background: var(--secondary-color);
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        .image-container {
+            position: relative;
+            width: 320px;
+            height: 180px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+            z-index: 1;
+        }
+
+        .image-container img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .youtube-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 50px;
+            background: #FF0000;
+            border-radius: 12px / 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+            pointer-events: none; 
+        }
+
+        .youtube-logo::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 14px 0 14px 24px;
+            border-color: transparent transparent transparent white;
+            margin-left: 4px;
+        }
+
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .issues-list {
+            columns: 2;
+            column-gap: 2rem;
+        }
+
+        .issues-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .click-hint {
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 1rem;
+            }
+            
+            .issues-list {
+                columns: 1;
+            }
+            
+            .image-container {
+                width: 280px;
+                height: 157px;
+            }
+            
+            .youtube-logo {
+                width: 64px;
+                height: 40px;
+                border-radius: 10px / 30%;
+            }
+            
+            .youtube-logo::before {
+                border-width: 11px 0 11px 18px;
+                margin-left: 3px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./article/global-peace.png" alt="Global Peace Logo" style="height: 100px; width: 100px;" />
+            <h1 style="color: #fff; font-size: 3rem;">Global Peace</h1>
+            <h2 style="color: #fff;">Peace, Justice and Equality on a Healthy Planet</h2>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./article/recent.html">Recent</a></li>
+                <li><a href="./article/contribution.html">Contribution</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="featured" aria-labelledby="featured-heading">
+            <h2 id="featured-heading">Featured Articles</h2>
+            
+            <article class="featured-article">
+                <img src="./pic1.jpeg" alt="Illustration representing global peace" />
+                <h3>Article 1</h3>
+                <img src="./pic2.webp" alt="Image related to Article 1" />
+                <p>Summary of the article about global peace initiatives and their impact on communities worldwide.</p>
+                <a href="./article/article-1.html" aria-label="Read more about Article 1">Read more</a>
+            </article>
+            
+            <article class="featured-article">
+                <h3>Article 2</h3>
+                <img src="./pic3.webp" alt="Image related to Article 2" />
+                <p>Summary of the article discussing recent developments in international peacekeeping efforts.</p>
+                <a href="./article/article-2.html" aria-label="Read more about Article 2">Read more</a>
+            </article>
+        </section>
+        
+        <section class="latest-news" aria-labelledby="news-heading">
+            <h2 id="news-heading">Latest News</h2>
+            <img src="./pic4.webp" alt="Breaking news about global peace" />
+            <ul class="news-list">
+                <li><a href="./article/recent.html">Latest developments in international peace negotiations</a></li>
+                <li><a href="./article/recent.html">New initiatives for conflict resolution</a></li>
+                <li><a href="./article/recent.html">Upcoming global peace summit announced</a></li>
+            </ul>
+        </section>
+        
+        <section class="content-card" aria-labelledby="disarmament-heading">
+            <h2 id="disarmament-heading">Disarmament</h2>
+            <p>The General Assembly and other bodies of the United Nations, supported by the Office for Disarmament Affairs, work to advance international peace and security through the pursuit of the elimination of nuclear weapons and other weapons of mass destruction and the regulation of conventional arms.</p>
+        </section>
+        
+        <section id="division" aria-labelledby="campaigns-heading">
+            <h2 id="campaigns-heading">ISSUES / CAMPAIGNS</h2>
+            
+            <div class="video-grid">
+                <a href="https://youtu.be/ppJ_0m1wjiI?si=hDYa2ZXfmup0lKfa" aria-label="Watch video about peace initiatives">
+                    <div class="image-container">
+                        <img src="pic5.webp" alt="Thumbnail for peace initiative video" />
+                        <div class="youtube-logo" title="YouTube"></div>
+                    </div>
+                </a>
+
+                <a href="https://youtu.be/NCf4xAfPzTc?si=yuBpgX0b0KdBfRXV" aria-label="Watch video about global campaigns">
+                    <div class="image-container">
+                        <img src="./pic6.png" alt="Thumbnail for global campaign video" />
+                        <div class="youtube-logo" title="YouTube"></div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="click-hint">Click above images for more information</div>
+            
+            <ul class="issues-list">
+                <li>Global Issues</li>
+                <li>Observances</li>
+                <li>Sustainable Development Goals</li>
+                <li>Our Common Agenda</li>
+                <li>The Summit of the Future</li>
+                <li>Climate Action</li>
+                <li>Peace and Security</li>
+                <li>Action for Peacekeeping (A4P)</li>
+                <li>Global Crisis Response Group</li>
+                <li>Call to Action for Human Rights</li>
+                <li>Disability Inclusion Strategy</li>
+                <li>Fight Racism</li>
+                <li>Hate Speech</li>
+                <li>LGBTQ+ Inclusion</li>
+                <li>Safety of Journalists</li>
+                <li>Rule of Law</li>
+                <li>Action to Counter Terrorism</li>
+                <li>Victims of Terrorism</li>
+                <li>Children and Armed Conflict</li>
+                <li>Violence Against Children (SRSG)</li>
+                <li>Sexual Violence in Conflict</li>
+                <li>Refugees and Migrants</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Global Peace Initiative. All rights reserved.</p>
+    </footer>
+</body>
+</html>
