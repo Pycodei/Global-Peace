@@ -3,90 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
-
+    <title>About Us - Global Peace Foundation</title>
     <style>
         body {
             position: relative;
             min-height: 100vh;
             margin: 0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.6;
+            padding: 20px;
+            box-sizing: border-box;
         }
+        
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 60px; /* Space for footer */
+        }
+        
+        .about-container {
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            background-color: #fff;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .tagline {
+            font-size: 2.5rem;
+            margin: 30px 0;
+            text-align: center;
+            line-height: 1.3;
+        }
+        
+        .tagline span {
+            color: navy;
+            padding: 0 10px;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            margin: 20px 0;
+        }
+        
         footer {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            display: block; 
-            background-color: #333; 
-            color: #fff; 
-            padding: 20PX; 
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            margin: 0;
-        }
-
-        .div {
-            padding: 10px; 
-            display: inline; 
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            border-radius: 5px; 
-            box-shadow: 0 0 10px rgb(0, 0, 0); 
-            margin: 10px;
         }
 
         @media (max-width: 1080px) {
+            .tagline {
+                font-size: 2rem;
+            }
             
-            .div{
-                display: flex;
-                flex-direction: column;
-                flex-shrink: 1;
-                align-items: center;
-            }
-            .in {
-                object-fit: cover;
-            }
-
-            footer {
-                position: relative;
-                left: 0;
-                bottom: -1;
-                right: 0;
+            .about-container {
+                padding: 15px;
             }
         }
-
+        
+        @media (max-width: 768px) {
+            .tagline {
+                font-size: 1.8rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tagline {
+                font-size: 1.5rem;
+            }
+            
+            .description {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="div">
+    <div class="content">
+        <div class="about-container">
+            <h1>About Us</h1>
 
-        <h1 style="text-align: center; font-size: 2rem;">About US</h1>
+            <div class="tagline">
+                <p>
+                    <span>WORKING TOGETHER</span>
+                    FOR PEACE WITH YOU
+                </p>
+            </div>
+            
+            <div class="description">
+                <p>Global Peace Foundation Activity Reports highlight projects and initiatives that apply GPF's values-based approach to building peace and social cohesion. 
+                    GPF collaborates with multi-sector partners to develop innovative solutions to critical problems facing the human family.
+                </p>
 
-        <div class="in" style="font-size: 5rem;">
-            <p>
-                <SPAN style="color: navy; padding: 10px;">
-                    WORKING TOGETER 
-                </SPAN>
-                FOR PEACE WITH YOU
-            </p>
+                <p>The many projects described in these reports affirm that our shared identity and common aspirations
+                    as members of the human family can resolve intractable identity-based conflicts and establish the basis for genuine peace and prosperity.
+                </p>
+            </div>
         </div>
-        
-        <div class="p">
-            <p>Global Peace Foundation Activity Reports highlight projects and initiatives that apply GPF’s values-based approach to building peace and social cohesion. 
-                GPF collaborates with multi-sector partners to develop innovative solutions to critical problems facing the human family.
-            </p>
-
-            <p>The many projects described in these reports affirm that our shared identity and common aspirations
-                as members of the human family can resolve intractable identity-based conflicts and establish the basis for genuine peace and prosperity.
-            </p>
-        
-        </div>
-    
     </div>
 
     <footer>
-
-        <p>&copy; 2025 global Peace update. All rights reserved.</p>
-
+        <p>&copy; 2025 Global Peace Update. All rights reserved.</p>
     </footer>
-    
 </body>
 </html>
