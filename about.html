@@ -24,6 +24,20 @@
             margin: 0;
         }
 
+        .div {
+            padding: 10px; 
+            display: inline-block; 
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            border-radius: 5px; 
+            box-shadow: 0 0 10px rgb(0, 0, 0); 
+            margin: 10px;
+        }
+
+        .p{
+            display: flexbox;
+            flex-direction: column;
+        }
+
         @media (max-width: 1080px) {
             .div{
                 margin: 10px;
@@ -34,21 +48,22 @@
     </style>
 </head>
 <body>
-    <div class="div" style="border-radius: 5px; box-shadow: 0 0 10px rgb(0, 0, 0); margin: 10px;">
-    <section style="padding: 10px; display: inline-block; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
-    <h1 style="text-align: center; font-size: 2rem;">About US</h1>
-    <div style="font-size: 5rem;"><SPAN style="color: navy;">WORKING TOGETER </SPAN><br>FOR PEACE WITH YOU</div>
-    <div>
-    <p>Global Peace Foundation Activity Reports highlight projects and initiatives that apply GPF’s values-based approach to building peace and social cohesion. 
-        GPF collaborates with multi-sector partners to develop innovative solutions to critical problems facing the human family.
-    </p>
+    <div class="div">
 
-    <p>The many projects described in these reports affirm that our shared identity and common aspirations
-        as members of the human family can resolve intractable identity-based conflicts and establish the basis for genuine peace and prosperity.
-    </p>
+        <h1 style="text-align: center; font-size: 2rem;">About US</h1>
+
+        <div style="font-size: 5rem; display: flexbox; flex-shrink: 1;"><SPAN style="color: navy;">WORKING TOGETER </SPAN><br>FOR PEACE WITH YOU</div>
+        <div class="p">
+            <p>Global Peace Foundation Activity Reports highlight projects and initiatives that apply GPF’s values-based approach to building peace and social cohesion. 
+                GPF collaborates with multi-sector partners to develop innovative solutions to critical problems facing the human family.
+            </p>
+
+            <p>The many projects described in these reports affirm that our shared identity and common aspirations
+                as members of the human family can resolve intractable identity-based conflicts and establish the basis for genuine peace and prosperity.
+            </p>
+        </div>
+    
     </div>
-    </section>
-</div>
 
     <footer>
 
