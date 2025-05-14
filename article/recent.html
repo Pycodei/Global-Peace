@@ -70,6 +70,26 @@
         @media (max-width: 1080px) {
             #dif,#intro,#new {
                 margin: 0px;
+                gap: 20px;
+            }
+            hr {
+                hr{
+            border: none;
+            border-top: 5px double #333;
+            height: 5px;
+            overflow: visible;
+            text-align: center;
+            font-size: 2rem;
+            margin: 30px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        hr::after{
+            content: "&";
+            background: aliceblue;
+            position: relative;
+            top: -20px;
+        }
             }
         }
 
